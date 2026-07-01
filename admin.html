@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Área Administrativa — Engesol</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header id="header" class="scrolled">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">☀</span>
+      <span class="logo-text">Enge<span>sol</span></span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="index.html">Site</a>
+    </nav>
+    <a href="index.html" class="btn btn-primary header-cta">Ver site</a>
+    <button id="hamburger" class="hamburger" aria-label="Abrir menu">☰</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <nav>
+      <a href="index.html">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== LOGIN ===== -->
+<div id="adminLoginWrap" class="admin-login-wrap">
+  <form id="adminLoginForm" class="admin-login-card login-form">
+    <div class="icon-box">🔒</div>
+    <h1>Área administrativa</h1>
+    <p>Acesso restrito à equipe Engesol.</p>
+    <input id="adminPassword" type="password" placeholder="Senha de acesso" class="form-input" required>
+    <p id="adminLoginError" class="admin-error"></p>
+    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:16px;">Entrar</button>
+    <p class="hint">Demonstração: senha <span>engesol2026</span></p>
+    <a href="index.html" style="color:#94a3b8; font-size:.85rem;">← Voltar para o site</a>
+  </form>
+</div>
+
+<!-- ===== DASHBOARD ===== -->
+<div id="adminDashboard" class="admin-dashboard">
+  <div class="admin-header">
+    <div>
+      <span class="section-tag">PAINEL ENGESOL TI</span>
+      <h1>Painel Administrativo</h1>
+    </div>
+    <div class="admin-header-actions">
+      <button id="adminClearBtn" class="admin-btn">Limpar dados de teste</button>
+      <a href="index.html" class="admin-btn ghost">Ver site</a>
+    </div>
+  </div>
+
+  <div class="admin-stats">
+    <div class="admin-stat-card">
+      <span class="icon" style="background:rgba(251,191,36,.1); color:#fcd34d;">📝</span>
+      <div><strong id="statOrcamentos">0</strong><span>Orçamentos recebidos</span></div>
+    </div>
+    <div class="admin-stat-card">
+      <span class="icon" style="background:rgba(56,189,248,.1); color:#38bdf8;">🛠️</span>
+      <div><strong id="statAgendamentos">0</strong><span>Manutenções agendadas</span></div>
+    </div>
+    <div class="admin-stat-card">
+      <span class="icon" style="background:rgba(52,211,153,.1); color:#34d399;">👥</span>
+      <div><strong id="statClientes">0</strong><span>Clientes cadastrados</span></div>
+    </div>
+    <div class="admin-stat-card">
+      <span class="icon" style="background:rgba(251,146,60,.1); color:#fb923c;">📊</span>
+      <div><strong id="statAtendimentos">0</strong><span>Total de atendimentos</span></div>
+    </div>
+  </div>
+
+  <div class="admin-tabs">
+    <button class="admin-tab active" data-tab="resumo">Resumo</button>
+    <button class="admin-tab" data-tab="orcamentos"><span id="tabLabelOrcamentos">Orçamentos (0)</span></button>
+    <button class="admin-tab" data-tab="agendamentos"><span id="tabLabelAgendamentos">Agendamentos (0)</span></button>
+    <button class="admin-tab" data-tab="clientes"><span id="tabLabelClientes">Clientes (0)</span></button>
+  </div>
+
+  <div id="panel-resumo" class="admin-panel active">
+    <div class="admin-resumo-grid">
+      <div class="admin-card">
+        <h3>Últimos orçamentos</h3>
+        <div id="resumoOrcamentos"></div>
+      </div>
+      <div class="admin-card">
+        <h3>Próximas manutenções</h3>
+        <div id="resumoAgendamentos"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="panel-orcamentos" class="admin-panel">
+    <div id="quotesTableWrap" class="admin-table-wrap"></div>
+  </div>
+
+  <div id="panel-agendamentos" class="admin-panel">
+    <div id="schedulesTableWrap" class="admin-table-wrap"></div>
+  </div>
+
+  <div id="panel-clientes" class="admin-panel">
+    <div id="clientsTableWrap" class="admin-table-wrap"></div>
+  </div>
+</div>
+
+<script src="./js/main.js"></script>
+<script src="./js/admin.js"></script>
+</body>
+</html>
