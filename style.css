@@ -338,11 +338,19 @@ button, input, select, textarea { font-family: inherit; }
   display: grid;
   gap: 24px;
 }
+
+.benefits .container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:60px;
+}
+
 @media (min-width: 640px) { .benefits-box { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .benefits-box { grid-template-columns: repeat(4, 1fr); } }
 
 .benefit-item { display: flex; align-items: center; gap: 16px; }
-.benefit-item .icon { font-size: 1.9rem; color: var(--amber-500); flex-shrink: 0; }
+.benefit-item .icon { font-size: 1.5rem; color: var(--amber-500); flex-shrink: 0; }
 .benefit-item .tag { font-size: .68rem; text-transform: uppercase; letter-spacing: -0.02em; color: var(--amber-500); font-weight: 700; }
 .benefit-item .label { font-size: .9rem; font-weight: 600; }
 @media (min-width: 1024px) {
@@ -387,8 +395,7 @@ section { padding: 96px 0; }
 .check-list { display: grid; gap: 16px; margin-top: 32px; }
 @media (min-width: 640px) { .check-list { grid-template-columns: 1fr 1fr; } }
 .check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: .9rem; color: var(--slate-100); }
-.check-list li::before { content: '✓'; color: var(--amber-400); font-size: 1.2rem; line-height: 1; }
-
+.check-list li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--amber-400); font-size: 1rem; line-height: 1; }
 /* =========================================================
    IDENTITY
 ========================================================= */
@@ -475,7 +482,7 @@ section { padding: 96px 0; }
   transition: all .25s ease;
 }
 .pillar-card:hover { border-color: rgba(251,191,36,.5); transform: translateY(-4px); }
-.pillar-card .emoji { font-size: 2rem; margin-bottom: 16px; }
+.pillar-card .emoji { font-size: 1.8rem; margin-bottom: 16px; color: var(--amber-400); }
 .pillar-card h3 { color: var(--white); font-size: 1.2rem; font-weight: 700; margin: 0 0 12px; }
 .pillar-card p, .pillar-card li { color: var(--slate-400); font-size: .9rem; }
 .pillar-card ul { display: grid; gap: 6px; }
@@ -516,10 +523,13 @@ section { padding: 96px 0; }
   display: grid; place-items: center;
   border-radius: 12px;
   background: rgba(251,191,36,.1);
-  font-size: 1.7rem;
+  color: var(--amber-400);
+  font-size: 1.4rem;
   margin-bottom: 20px;
   transition: all .25s ease;
 }
+
+.service-card:hover .icon-box { background: var(--amber-400); color: var(--night-950); }
 .service-card:hover .icon-box { background: var(--amber-400); color: var(--night-950); }
 .service-card h3 { color: var(--white); font-size: 1.05rem; margin: 0 0 12px; }
 .service-card li { color: var(--slate-400); font-size: .85rem; margin-bottom: 4px; }
@@ -683,7 +693,8 @@ section { padding: 96px 0; }
   display: grid; place-items: center;
   border-radius: 12px;
   background: rgba(251,191,36,.1);
-  font-size: 1.2rem;
+  color: var(--amber-400);
+  font-size: 1.1rem;
   flex-shrink: 0;
 }
 .contact-info-item strong { display: block; color: var(--white); font-size: .95rem; }
@@ -711,7 +722,7 @@ section { padding: 96px 0; }
   text-align: center;
   padding: 24px;
 }
-.map-placeholder .pin { font-size: 1.8rem; margin-bottom: 8px; }
+.map-placeholder .pin { font-size: 2rem; margin-bottom: 8px; color: var(--amber-400); }
 .map-placeholder p { color: var(--slate-400); font-size: .85rem; margin: 0; }
 
 /* =========================================================
@@ -788,7 +799,8 @@ footer { background: var(--night-950); border-top: 1px solid rgba(255,255,255,.1
   border-radius: 50%;
   background: var(--emerald-500);
   box-shadow: 0 15px 35px -8px rgba(16,185,129,.6);
-  font-size: 1.5rem;
+  color: var(--white);
+  font-size: 1.8rem;
   transition: transform .2s ease, background .2s ease;
 }
 .whatsapp-float:hover { background: #059669; transform: scale(1.1); }
