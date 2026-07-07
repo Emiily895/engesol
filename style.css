@@ -635,6 +635,15 @@ section { padding: 96px 0; }
 .benefit-row strong { display: block; color: var(--white); font-size: .9rem; }
 .benefit-row span { color: var(--slate-400); font-size: .78rem; }
 
+/* Agendamento icons */
+#agendamento .icon,
+#agendamento .benefit-row .icon,
+#agendamento .icon-box,
+#agendamento .step-num {
+  background: rgba(251,191,36,.1);
+  color: var(--amber-400);
+}
+
 /* =========================================================
    PROJECTS
 ========================================================= */
@@ -725,6 +734,12 @@ section { padding: 96px 0; }
 .map-placeholder .pin { font-size: 2rem; margin-bottom: 8px; color: var(--amber-400); }
 .map-placeholder p { color: var(--slate-400); font-size: .85rem; margin: 0; }
 
+/* Espaço entre botão WhatsApp e formulário (seção contato) */
+#contato .whatsapp-link {
+  margin-bottom: 28px;
+  display: inline-flex;
+}
+
 /* =========================================================
    CTA
 ========================================================= */
@@ -786,6 +801,35 @@ footer { background: var(--night-950); border-top: 1px solid rgba(255,255,255,.1
 }
 .footer-bottom .socials { display: flex; flex-wrap: wrap; gap: 16px; }
 .footer-bottom a:hover { color: var(--amber-400); }
+
+/* Footer contact icons */
+.footer-grid .footer-col:nth-child(4) ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.footer-grid .footer-col:nth-child(4) ul li i {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(251,191,36,.1);
+  color: var(--amber-400);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Manter texto visível no hover do botão de orçamento do footer */
+.footer-mini-btn,
+.footer-col .footer-mini-btn {
+  color: var(--night-950);
+}
+.footer-col .footer-mini-btn:hover {
+  color: var(--night-950);
+  background: var(--amber-400);
+  text-decoration: none;
+}
 
 /* =========================================================
    WHATSAPP FLOATING BUTTON
@@ -900,11 +944,32 @@ footer { background: var(--night-950); border-top: 1px solid rgba(255,255,255,.1
 .admin-panel.active { display: block; }
 .admin-card { background: var(--night-900); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 24px; }
 .admin-card h3 { color: var(--white); margin: 0 0 16px; }
-.admin-list-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: .9rem; }
+.admin-list-item { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: .95rem; }
 .admin-list-item:last-child { border: none; }
-.admin-list-item strong { display: block; color: var(--white); font-weight: 500; }
-.admin-list-item small { color: var(--slate-500); font-size: .75rem; }
-.status-pill { padding: 4px 12px; border-radius: 999px; font-size: .72rem; font-weight: 600; }
+.admin-list-item strong { display: block; color: var(--white); font-weight: 500; margin-bottom: 4px; }
+.admin-list-item small { color: var(--slate-500); font-size: .8rem; }
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+.admin-table thead th {
+  padding: 16px 18px;
+  text-align: left;
+  color: var(--slate-400);
+  font-size: .85rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.admin-table tbody tr {
+  background: rgba(255,255,255,.03);
+}
+.admin-table tbody td {
+  padding: 18px;
+  color: var(--slate-300);
+  vertical-align: top;
+}
+.status-pill { padding: 6px 14px; border-radius: 999px; font-size: .78rem; font-weight: 600; }
 .status-novo, .status-agendado { background: rgba(251,191,36,.15); color: var(--amber-300); }
 .status-em-contato, .status-confirmado { background: rgba(56,189,248,.15); color: var(--sky-400); }
 .status-fechado, .status-concluido { background: rgba(52,211,153,.15); color: var(--emerald-400); }
